@@ -1,73 +1,93 @@
-# React + TypeScript + Vite
+# Devashish Kamble — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A single-page developer portfolio built with React, TypeScript, and GSAP. Dark theme, terminal-style hero, scroll-driven animations, and sections for About, Education, Experience, Projects, Skills, Philosophy, and Contact.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech stack
 
-## React Compiler
+| Layer | Tech |
+|-------|------|
+| **Build** | [Vite](https://vitejs.dev/) 7 |
+| **Framework** | [React](https://react.dev/) 19 + [TypeScript](https://www.typescriptlang.org/) |
+| **Styling** | [Tailwind CSS](https://tailwindcss.com/) 3 + [shadcn/ui](https://ui.shadcn.com/) (New York) |
+| **Animation** | [GSAP](https://gsap.com/) + [ScrollTrigger](https://gsap.com/docs/v3/Plugins/ScrollTrigger/) |
+| **Icons** | [Lucide React](https://lucide.dev/) |
+| **Fonts** | Inter (body), JetBrains Mono (headings / code) |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Project structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── App.tsx              # Root layout, composes sections
+├── main.tsx             # Entry point, GSAP plugin registration
+├── index.css             # Global styles, Tailwind, theme
+├── components/           # Shared UI
+│   ├── Navigation.tsx
+│   ├── Footer.tsx
+│   └── SectionHeader.tsx
+├── sections/             # Page sections (one per file)
+│   ├── HeroSection.tsx
+│   ├── AboutSection.tsx
+│   ├── EducationSection.tsx
+│   ├── ExperienceSection.tsx
+│   ├── ProjectsSection.tsx
+│   ├── SkillsSection.tsx
+│   ├── PhilosophySection.tsx
+│   └── ContactSection.tsx
+├── hooks/
+│   └── useGlobalSnap.ts  # Scroll-snap for pinned sections
+└── lib/
+    └── utils.ts          # cn() for class names
+public/                    # Static assets (images, 404.html)
+.github/workflows/         # GitHub Actions (deploy to GitHub Pages)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Scripts
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start dev server at [http://localhost:5173](http://localhost:5173) |
+| `npm run build` | Type-check and build for production → `dist/` |
+| `npm run preview` | Serve `dist/` locally (after build) |
+| `npm run lint` | Run ESLint |
+
+---
+
+## Run locally
+
+```bash
+npm install
+npm run dev
 ```
+
+Open [http://localhost:5173](http://localhost:5173).
+
+---
+
+## Deploy to GitHub Pages
+
+This repo is set up to deploy to **https://\<username\>.github.io** via GitHub Actions.
+
+1. Create a **public** repo named **\<username\>.github.io**.
+2. Push this app (with `.github/workflows/deploy.yml`) to the `main` branch.
+3. In the repo: **Settings → Pages → Source: GitHub Actions**.
+4. After the workflow runs, the site is live at **https://\<username\>.github.io**.
+
+Full steps and troubleshooting: **[DEPLOY.md](./DEPLOY.md)**.
+
+---
+
+## Fork & reuse
+
+If you like this portfolio, feel free to **fork** or **reproduce the code** to build your own site. Swap in your content, tweak the sections and styling, and deploy to your own GitHub Pages (or elsewhere). No need to ask—just go for it.
+
+---
+
+## License
+
+Private — portfolio use.
