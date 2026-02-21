@@ -12,9 +12,9 @@ const PROJECTS = [
   {
     title: 'AI Voice Agent Backend',
     description:
-      'Backend for an autonomous phone agent serving a real UK trade client—booking, rescheduling, and cancellation. TypeScript/Express + Cal.com; E.164 phone normalization (libphonenumber-js) and slot-locking to handle concurrent bookings. Built independently under deadline.',
+      'Backend for an autonomous phone agent serving a real UK trade client—booking, rescheduling, and cancellation.',
     image: '/project_agent.jpg',
-    tags: ['TypeScript', 'Express', 'Cal.com'],
+    tags: ['TypeScript', 'Express', 'Retell AI'],
     icon: PhoneCall,
   },
   {
@@ -28,7 +28,7 @@ const PROJECTS = [
   {
     title: 'Support Reply Assistant',
     description:
-      'LangGraph RAG agent with async PostgreSQL memory and scheduled knowledge sync.',
+      'LangGraph agent with async PostgreSQL memory and scheduled knowledge sync.',
     image: '/project_agent.jpg',
     tags: ['LangChain', 'RAG', 'FastAPI'],
     icon: MessageSquare,

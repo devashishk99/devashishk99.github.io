@@ -28,7 +28,7 @@ const SKILL_CATEGORIES = [
       'LangChain',
       'LangGraph',
       'RAG',
-      'vector embeddings',
+      'Vector embeddings',
       'Prompt engineering',
       'Tool calling / function calling',
       'Conversational AI',
@@ -56,7 +56,7 @@ const SKILL_CATEGORIES = [
     title: 'Reliability & operations',
     skills: [
       'Incident triage',
-      'on-call support',
+      'On-call support',
       'Debugging via logs / stack traces',
       'Root cause analysis (RCA)',
     ],

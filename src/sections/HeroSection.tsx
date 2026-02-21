@@ -12,7 +12,7 @@ const PROFILE_DATA = [
   { label: 'NAME', value: 'Devashish Kamble', color: 'cyan' },
   { label: 'ROLE', value: 'Applied AI Engineer', color: 'magenta' },
   { label: 'LOCATION', value: 'Bolzano, Italy', color: 'cyan' },
-  { label: 'FOCUS', value: 'Solutions · AI · Reliability', color: 'magenta' },
+  { label: 'FOCUS', value: 'Automation · LLMs · Reliability', color: 'magenta' },
 ];
 
 export function HeroSection() {

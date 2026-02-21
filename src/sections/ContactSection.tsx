@@ -12,14 +12,14 @@ const CONTACTS = [
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    value: '/in/devashishkamble',
-    href: 'https://linkedin.com/in/devashishkamble',
+    value: '/in/devashishk99',
+    href: 'https://linkedin.com/in/devashishk99',
   },
   {
     icon: Github,
     label: 'GitHub',
-    value: '/devashishkamble',
-    href: 'https://github.com/devashishkamble',
+    value: '/devashishk99',
+    href: 'https://github.com/devashishk99',
   },
 ];
 

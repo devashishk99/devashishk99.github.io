@@ -67,8 +67,8 @@ export function AboutSection() {
           </h2>
 
           <p className="reveal text-white/60 text-base leading-relaxed mb-6 max-w-md">
-            Backend-leaning engineer with a Master's in Cognitive Science. I build LLM systems,
-            RAG agents, and automation pipelines that ship—focused on reliability and measurable
+            Backend-leaning engineer with a Master's in Cognitive Science. I build LLM systems
+            and automation pipelines that ship—focused on reliability and measurable
             impact.
           </p>
           <p className="reveal text-white/60 text-base leading-relaxed mb-6 max-w-md">
